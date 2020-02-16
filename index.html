@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Abrorov Javdat CV</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <section id="person-info">
+        <div class="profile-pic">
+          <img src="img/moss.jpg" alt="avatar" />
+        </div>
+        <h1>Abrorov Javdat</h1>
+        <div class="contact-info">
+          <h4>Contact info:</h4>
+          <ul>
+            <li>
+              e-mail:
+              <a href="mailto:javdat.abrorov@gmail.com">
+                javdat.abrorov[at]gmail.com
+              </a>
+            </li>
+            <li>telegram: <a href="https://t.me/javdat">@javdat</a></li>
+          </ul>
+        </div>
+      </section>
+      <section id="summary">
+        <h4>Summary:</h4>
+        <article>
+          A team player who constantly works on himself and loves to learn new
+          technologies that lead the business to new heights
+        </article>
+      </section>
+      <section id="skills">
+        <h4>Skills:</h4>
+        <ul>
+          <li>C#</li>
+          <li>ASP.NET</li>
+          <li>T-SQL</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>NodeJS</li>
+          <li>MongoDB</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>GIT</li>
+        </ul>
+      </section>
+      <section id="code-examples">
+        <h4>Code examples:</h4>
+        <pre class="code">
+        class HtmlLoader
+        {
+            private readonly HttpClient _client;
+            private readonly string _url;
+
+            public HtmlLoader(IParserSettings settings)
+            {
+                _client = new HttpClient();
+                _url = settings.BaseUrl;
+            }
+
+            public async Task&lt;string&gt; GetSource(string searchQuery)
+            {
+                var urlWithQuery = string.Concat(_url, searchQuery);
+                var response = await _client.GetAsync(urlWithQuery);
+                string source = null;
+
+                if (response != null && response.StatusCode == HttpStatusCode.OK)
+                {
+                    source = await response.Content.ReadAsStringAsync();
+                }
+
+                return source;
+            }
+        }
+        </pre>
+      </section>
+      <section id="experience">
+        <h4>Experience:</h4>
+        <ul>
+          <li>application refactoring</li>
+          <li>sql query optimization</li>
+          <li>integration of EDMS with 1C Accounting</li>
+          <li>synchronization with Active Directory</li>
+          <li>create various reports for customers</li>
+          <li>creation of procedures and T-SQL scripts in the database</li>
+          <li>internal micro-services development</li>
+        </ul>
+      </section>
+      <section id="education">
+        <h4>Education:</h4>
+        <p>
+          <b>2015 - 2017: Tashkent University of Information Technologies</b>
+        </p>
+        <p><i>Master of Science: Software Design and Architecture</i></p>
+      </section>
+      <section id="languages">
+        <h4>Languages:</h4>
+        <ul>
+          <li>Uzbek: Native</li>
+          <li>English: B2 — Upper Intermediate</li>
+          <li>Russian: C2 — Proficiency</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
